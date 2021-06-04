@@ -13,8 +13,8 @@ app.use(express.urlencoded({extended:true}));
 
 app.get('/:shortUrlId',(req,res)=>{
     const longUrl = url[req.params.shortUrlId];
-    // res.redirect(longUrl);
-    res.send(longUrl);
+    res.redirect(longUrl);
+    // res.send(longUrl);
 })
 
 app.post('/',(req,res)=>{
