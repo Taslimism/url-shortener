@@ -11,7 +11,7 @@ let url = {
 app.use(express.static('static'));
 app.use(express.urlencoded({extended:true}));
 
-app.get('https://url-srtnr.herokuapp.com/:shortUrlId',(req,res)=>{
+app.get('/:shortUrlId',(req,res)=>{
     const longUrl = url[req.params.shortUrlId];
     res.redirect(longUrl);
     // res.send(longUrl);
