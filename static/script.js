@@ -9,7 +9,7 @@ const port = window.location.port;
 let url =
 	hostname === "localhost"
 		? `http://localhost:${port}/`
-		: "https://url-srtnr.herokuapp.com/";
+		: "https://sortly.herokuapp.com/";
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const { name, value } = input;

@@ -6,7 +6,7 @@ const shortid = require("shortid");
 let url = {};
 
 const domain =
-	port === 3000 ? "http://localhost:3000/" : "https://url-srtnr.herokuapp.com/";
+	port === 3000 ? "http://localhost:3000/" : "https://sortly.herokuapp.com/";
 
 app.use(express.static("static"));
 app.use(express.json());
