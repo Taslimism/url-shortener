@@ -1,32 +1,36 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
-const shortid = require('shortid');
+const shortid = require("shortid");
 
+let url = {};
 
-let url = {
-    
-}
+const domain =
+	port === 3000 ? "http://localhost:3000/" : "https://url-srtnr.herokuapp.com/";
 
-app.use(express.static('static'));
-app.use(express.urlencoded({extended:true}));
+app.use(express.static("static"));
+app.use(express.json());
 
-app.get('/:shortUrlId',(req,res)=>{
-    const longUrl = url[req.params.shortUrlId];
-    res.redirect(longUrl);
-    // res.send(longUrl);
-})
+app.get("/:shortUrlId", (req, res) => {
+	const longUrl = url[req.params.shortUrlId];
+	res.redirect(longUrl);
+});
 
-app.post('/',(req,res)=>{
-    const longUrl = req.body.longUrl;
-    const shortUrlId = shortid.generate();
-    url[shortUrlId] = longUrl;
-    console.log(url);
-    res.send({shortUrl:`https://url-srtnr.herokuapp.com/${shortUrlId}`});
-})
+app.get("/url/all", (req, res) => {
+	const urls = [...Object.keys(url)];
+	const lastUrl = domain + urls[urls.length - 1];
 
+	return res.json({ url: lastUrl });
+});
 
+app.post("/", (req, res) => {
+	const longUrl = req.body.longUrl;
+	const shortUrlId = shortid.generate();
+	url[shortUrlId] = longUrl;
 
-app.listen(port,()=>{
-    console.log('Server up and running on port 3000');
-})
+	res.send({ shortUrl: `${domain}${shortUrlId}` });
+});
+
+app.listen(port, () => {
+	console.log(`Server up and running on port ${port}`);
+});

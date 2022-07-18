@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAFb1cTnG9XE5xvVxOcb1cTnG9XE5xvVxOcZE4RnGROEZxkThGcZE4RnAAAACUAAAAAAAAAAAAAAAAAAAAAb1cTh96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/HmyH/x5sh/8ebIf/w1Yr/AAAAJwAAAAAAAAAAAAAAAG9XE4ferSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/8ebIf/HmyH/8NWK//DViv8AAAAnAAAAAAAAAABvVxOH3q0l/96tJf/erSX/x5sh//v04v/79OL/3q0l/96tJf/erSX/x5sh//DViv/w1Yr/8NWK/wAAACcAAAAAb1cTh96tJf/erSX/x5sh//v04v/erSX/3q0l//v04v/erSX/3q0l/96tJf/w1Yr/8NWK//DViv/w1Yr/AAAAJW9XE4ferSX/3q0l//v04v/erSX/3q0l/96tJf/79OL/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/29XE5xvVxOH3q0l/96tJf/79OL/0KMj/96tJf/79OL/3q0l//v04v/erSX/3q0l/96tJf/erSX/3q0l/96tJf9vVxOcb1cTh96tJf/erSX/3q0l//v04v/79OL/3q0l//v04v/erSX/+/Ti/9yrJf/erSX/3q0l/96tJf/erSX/b1cTnG9XE4ferSX/3q0l/96tJf/erSX/3q0l//nv1f/erSX/+/Ti/96tJf/79OL/+/Ti/96tJf/erSX/3q0l/29XE5xvVxOH3q0l/96tJf/erSX/3q0l/96tJf/erSX/+O7V/96tJf/79OL/3q0l/96tJf/79OL/3q0l/96tJf9vVxOcb1cTh96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/79OL/3q0l/96tJf/HmyH/+/Ti/96tJf/erSX/b1cTnG9XE4ferSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/+/Ti/96tJf/HmyH/+/Ti/96tJf/erSX/3q0l/29XE5xvVxOH3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/79OL/+/Ti/96tJf/erSX/3q0l/96tJf9vVxOcb1cTh96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/b1cTnG9XE4ferSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/96tJf/erSX/3q0l/29XE5wAAAAAb1cTh29XE4dvVxOHb1cTh29XE4dvVxOHb1cTh29XE4dvVxOHb1cTh29XE4dvVxOHb1cTh29XE4cAAAAFgB8AAAAPAAAABwAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAA==" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>URL Shortener</title>
 </head>
 <body>
-    
-    <h3>Please paste or enter your URL</h3>
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./assets/shortly.png" alt="logo"/>
+            <h4>short.ly</h4>
+        </div>
+        <div class="personal-info">
+            <h4><a href="https://tapofo.netlify.app" target="_blank">About</a></h4>
+            <h4><a href="mailto:imtas00@gmail.com?subject = Feedback&body = Message">Contact</a></h4>
+        </div>
+    </header>
     <div class="container">
+        <div class="description">
+            <h1>Shorter Links,<br> <span>Better Results</span></h1>
+            <p>A URL shortener built with powerful tools to help you grow your brand to maximum</p>
+            <button>Shorten URL</button>
+        </div>
+        <div class="hero-container">
+            <img class="hero" src="./assets/hero.svg" alt="hero"/>
+        </div>
+   </div>
+
+    <div class="form-container">
+        <p>Generate your URL shortend!</p>
         <form action="/" method="post" class="form">
-            <input type = "text" name = "longUrl"></input>
-            <button class="button" type="submit">Generate</button>
-        </form>
+            <input type = "text" class="url" name = "longUrl"></input>
+            <button class="submit-button" type="submit">Generate</button>
+        </form>  
+    </div>
+
+    <div class="about">
+        <div>
+            <h3>Why a shortened URL?</h3>
+            <p>
+            Shorter URLs takes up much less space when compared to the orginal ones. Hence, it is easier to share shorter versions that the original ones
+            </p>
+        </div>
+
+        <div class="about-middle">
+            <h3>How to use short.ly?</h3>
+            <p>
+            shortl.ly is super simple to use. Paste your long URLs, shorten it on a button click, copy it and share it anywhere, without having to worry about anything
+            </p>
+        </div>
+        <div>
+            <h3>Is short.ly free to use?</h3>
+            <p>
+            Yes, the short.ly platform is completely free to use. You can shorten as many URLs as you want on our platform without thinking about anything.
+        </p>
+        </div>
+    </div>
+
+    <div class="previous-container">
+        <h1>Previous URLs</h1>
+        
     </div>
 
     <script src="/script.js"></script>
